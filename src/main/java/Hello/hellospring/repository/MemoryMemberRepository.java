@@ -13,7 +13,7 @@ import java.util.Optional;
  */
 public class MemoryMemberRepository implements MemberRepository {
 
-    private static Map<Long,Member> store = new HashMap<>();
+    private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
 
     @Override
@@ -32,7 +32,8 @@ public class MemoryMemberRepository implements MemberRepository {
     public Optional<Member> findByName(String name) {
         return store.values().stream()
             .filter(member -> member.getName().equals(name))
-            .findAny();
+            .findAny()
+            ;
     }
 
     @Override
@@ -43,5 +44,4 @@ public class MemoryMemberRepository implements MemberRepository {
     public void clearStore() {
         store.clear();
     }
-
 }
