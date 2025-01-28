@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
+    private MemberService memberService;
 //    MemoryMemberRepository memoryMemberRepository = new MemoryMemberRepository();
 
     @AfterEach
