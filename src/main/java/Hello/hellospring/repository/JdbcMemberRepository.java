@@ -12,7 +12,6 @@ public class JdbcMemberRepository implements MemberRepository{
 
     public JdbcMemberRepository(DataSource dataSource) throws SQLException {
         this.dataSource = dataSource;
-        dataSource.getConnection();
     }
 
     @Override
